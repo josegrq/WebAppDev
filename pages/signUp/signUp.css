@@ -25,8 +25,8 @@
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 35%; /* Could be more or less, depending on screen size */
-  height: 50%;
+  width: 60%; /* Could be more or less, depending on screen size */
+  /*height: 50%;*/
 }
 
 .container{
@@ -47,14 +47,10 @@ hr {
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+
 
 /* Full-width input fields */
-.form-container input[type=email], .form-container input[type=email] {
+.form-container input[type=text], .form-container input[type=email] {
   width: 100%;
   padding: 13px;
   margin: 5px 0 22px 0;
@@ -62,11 +58,7 @@ hr {
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=email]:focus, .form-container input[type=email]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+
 
 .form-container input[type=date], .form-container input[type=date] {
   width: 100%;
@@ -76,10 +68,7 @@ hr {
   background: #f1f1f1;
 }
 
-.form-container input[type=date]:focus, .form-container input[type=date]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+
 
 /* Set a style for the submit/signUp button */
 .form-container .btn {

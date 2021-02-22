@@ -15,7 +15,7 @@
 
     <body>
 
-        <button class="open-button" onclick="openForm()">Open Form</button>
+        <button class="open-button" id="openButton" onclick="openForm()">Open Form</button>
 
         <div class="form-popup" id="signUpForm">
             <form action="/action_page.php" class="form-container">
@@ -83,10 +83,12 @@
 
             function openForm() {
                 document.getElementById("signUpForm").style.display = "block";
+                document.getElementById("openButton").style.display = "none";
             }
 
             function closeForm() {
                 document.getElementById("signUpForm").style.display = "none";
+                document.getElementById("openButton").style.display = "block";
             }
         </script>
     </body>
