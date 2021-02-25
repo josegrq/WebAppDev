@@ -1,30 +1,18 @@
 * {box-sizing: border-box;}
 
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
+  display: true;
 }
-
-
+body {
+  background-color: #F1F6F9;
+}
 /* Add styles to the form container */
 .form-container {
-  background-color: #fefefe;
+  border-radius: 25px;
+  background-color: #9ba4b4;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px solid #14274e;
   width: 60%; /* Could be more or less, depending on screen size */
   /*height: 50%;*/
 }
@@ -33,8 +21,9 @@
   padding: 12px;
 }
 
+/*Header Line */
 hr {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #14274e;
   margin-bottom: 25px;
 }
 
@@ -44,9 +33,8 @@ hr {
   padding: 13px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: #F1F6F9;
 }
-
 
 
 /* Full-width input fields */
@@ -55,7 +43,7 @@ hr {
   padding: 13px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: #F1F6F9;
 }
 
 
@@ -65,14 +53,14 @@ hr {
   padding: 13px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: #F1F6F9;
 }
 
 
 
 /* Set a style for the submit/signUp button */
 .form-container .btn {
-  background-color: #0f6d12;
+  background-color: #1427FE;
   color: white;
   padding: 12x 16px;
   border: none;
@@ -84,10 +72,12 @@ hr {
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: #fe1414;
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+text
