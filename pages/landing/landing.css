@@ -1,23 +1,62 @@
-/* Style the sidebar - fixed full height */
-.leftSidebar {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #14274E;
-    overflow-x: hidden;
-    padding-top: 16px;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+/*Navigation Bar Style*/
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: #394867;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 10%;
+  font-size: 20px;
+}
+.nav-links {
+  list-style: none;
+}
+/*.logo {
+
+}*/
+.nav-links li {
+  text-align: center;
+  margin: 15px 0px;
+}
+.navigation-bar li, a, button {
+  text-decoration: none;
+  color: #9BA4B4;
+}
+.nav-links li a button {
+  width: 100%;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 3px solid #14274E;
+  transition: all ease .5s;
+}
+.nav-links li a button:hover {
+  background-color:  #14274E;
+  border: 3px solid  #14274E;
+  text-decoration: none;
+  text-decoration-style: none;
+  transform: scale(1.1);
+  color: #F1F6F9;
+}
   .rightSidebar {
     height: 100%;
-    width: 160px;
+    width: 25%;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #14274E;
+    background-color: #394867;
     overflow-x: hidden;
     padding-top: 16px;
     color:#9BA4B4;
@@ -63,14 +102,14 @@
   /* Style the header */
 .header {
     padding: 10px 186px;
-    background: #14274E;
+    background: #394867;
     color: #9BA4B4;
     text-align: center;
   }
 
   .footer {
     padding: 10px 186px;
-    background: #14274E;
+    background-color: #394867;
     color: #9BA4B4;
     text-align: center;  
   }
@@ -84,6 +123,8 @@
   /* Page content */
   .content {
     padding: 16px;
+    width: 50%;
+    margin: 0 auto;
   }
   
   /* The sticky class is added to the header with JS when it reaches its scroll position */
