@@ -8,15 +8,14 @@
 .main-content {
     height: 100vh;
     width: 100%;
-    background-color: lightgray;
+    background-color: #9BA4B4;
 }
 
 .own-modal {
     padding: 10px;
-    background-color: whitesmoke;
+    background-color: #f1f6f9;
     width: 25%;
     border-radius: 15px;
-    box-shadow: -6px -6px 10px grey;
     align-content: center;
     text-align: center;
 }
@@ -34,4 +33,14 @@
 .modal-title {
     font-size: 25px;
     padding: 10px;
+}
+
+.signin-button, .cancel-button {
+    background-color: #14274e;
+    color: white;
+}
+
+.signin-button:hover, .cancel-button:hover {
+    background-color: #394867;
+    color: white;
 }
