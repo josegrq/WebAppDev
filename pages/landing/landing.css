@@ -1,0 +1,117 @@
+/* Style the sidebar - fixed full height */
+.leftSidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #14274E;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+  .rightSidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #14274E;
+    overflow-x: hidden;
+    padding-top: 16px;
+    color:#9BA4B4;
+  }
+  
+  /* Style sidebar links */
+  .leftSidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #9BA4B4;
+    display: block;
+  }
+
+  .rightSidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #9BA4B4;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .leftSidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style the main content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+  
+  /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+  @media screen and (max-height: 450px) {
+    .leftSidebar {padding-top: 15px;}
+    .rightSidebar {padding-top: 15px;}
+    .leftSidebar a {font-size: 18px;}
+    .rightSidebar a {font-size: 18px;}
+
+  }
+
+  /* Style the header */
+.header {
+    padding: 10px 186px;
+    background: #14274E;
+    color: #9BA4B4;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 10px 186px;
+    background: #14274E;
+    color: #9BA4B4;
+    text-align: center;  
+  }
+  .sweatLogo {
+    float: left;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  .body {
+    background: #F1F6F9;
+    padding: 10px 186px;
+    color: #14274E;
+  }
+
+  .randomContent{
+    background: #F1F6F9;
+    padding: 10px 186px;
+    color: #14274E;
+  }
+
+  .content + .iframe {
+      margin:auto;
+      display: block;
+  }
+
