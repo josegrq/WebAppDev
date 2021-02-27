@@ -10,6 +10,7 @@ Bootstrap 4.6.0
 HTML5
 icon8
 Google Chrome Dev Tools
+Google Fonts
 Visual Studio Code
 Github
 Github Desktop
@@ -17,15 +18,31 @@ Github Desktop
 About Us:
 Sweat is a social media web application that aims to connect athletes
 and fitness enthusiasts with other like minded individuals!
-Sweat aims to take insperation from other, well known, social media
+Sweat aims to take inspiration from other, well known, social media
 applications such as Twitter, Facebook, Instagram, and Reddit.
 
 General Layout:
-Most of our insperation for the design comes from twitter where we
+Most of our inspiration for the design comes from twitter where we
 really like how the welcoming page, sign up, sign in and the landing
 page flowed together. 
 
+General Design: 
+For our UX, we decided to select a color pallet
+that we both liked. This colora pallet was enough for us to be able to 
+contrast different elements when required. It would also allow us to highlight
+any important info/buttons/text for the user to quickly see.
+
+For a fun and creative side of the design, we decided to use small icons next to
+labels/button to introduce the user to different meaning. Foir example, when the
+width of the screen shrinks enough, the nav bar on the left will chnage size and
+the labels will dissapear except for the icons. So, after the user had experienced 
+the app for some time, they would have matched the icons.
+
 Welcoming Page (Jose):
+The purpose of this page was to simply ask the user whether they wanted to sign in or
+sign up. One idea was to show the user the signin page and have a signup button if they
+wanted to do that instead, but we liked this idea better. We thought this would keep the 
+pages clean and compact.
 
 Sign Up (Kyle):
 The Sign Up page honestly has more fields than I'd like as while 
@@ -40,6 +57,9 @@ per entry that twitters sign up follows as it keeps everything legible
 and easy for users of all ages.
 
 Sign In (Jose):
+I took inspiration from Facebbok and decided to keep the sign in page as simple as possible.
+As you will see throughout the app is that we have rounded the edges of the containers to give 
+design a smoother look. The users can simply sign in with password and username/email
 
 Landing(Jose & Kyle):
 
@@ -53,3 +73,14 @@ header follow the users scroll but agreed with Jose that the lower parts
 of the page looked better without. 
 
 Navigation and Sidebars (Jose):
+For the navigation bar, I wanted to make is as user friendly and responsive as possible. We have a 
+design that is very common and traditional. We have the logo, some common options, and a button for more options
+as we expand the project. The nav bar and its content will shrink based on the width of the screen. Once the
+width gets too small, then the nav bar will shrink and the label will dissapear leaving only the icons for
+simplicity. I have added a CSS effect that I implemented myself to be more visually appealing. The buttons will pop
+up as they hover over to let the user know they are selecting the right button.
+
+Logo (Jose):
+This logo was created using logomakr. For the design we wanted to keep it simple, but it also had to relate to the 
+name of the project. The name is sweat and hence the drop of water/sweat. The color pallet also had a little bit 
+of influence on the logo. 
