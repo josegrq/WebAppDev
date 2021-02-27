@@ -4,9 +4,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="./signUp.css" rel="stylesheet" type="text/css">
-
+        <title> Sign Up for Sweat </title>
         <style>
             body {font-family: Arial, Helvetica, sans-serif;}
         </style>
@@ -25,60 +26,60 @@
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtFirstName"><b>First Name:</b></label>
-                            <input type="text" placeholder="First Name" name="txtFirstName" required>
+                            <input id="txtFirstName" type="text" placeholder="First Name" name="txtFirstName" required>
                         </div>
                     </div>
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtLastName"><b>Last Name:</b></label>
-                            <input type="text" placeholder="Last Name" name="txtLastName" required>
+                            <input id="txtLastName" type="text" placeholder="Last Name" name="txtLastName" required>
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtUserName"><b>Username:</b></label>
-                            <input type="text" placeholder="Username" name="txtUserName" required>
+                            <input id="txtUserName" type="text" placeholder="Username" name="txtUserName" required>
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtDoB"><b>Date of birth:</b></label>
-                            <input type="date" id="txtDoB" name="txtDoB" required class="form-control" placeholder="Date of birth">
+                            <input id="txtDoB" type="date" name="txtDoB" required class="form-control">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtEmail"><b>Email:</b></label>
-                            <input type="text" placeholder="Enter Email" name="txtEmail" required>
+                            <input id="txtEmail" type="text" placeholder="Enter Email" name="txtEmail" required>
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                            <label for="txtConfirmEmail"><b>Confirm Email:</b></label>
-                           <input type="text" placeholder="Confirm Email" name="txtConfirmEmail" required>
+                           <input id="txtConfirmEmail" type="text" placeholder="Confirm Email" name="txtConfirmEmail" required>
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtPassword"><b>Password:</b></label>
-                            <input type="password" placeholder="Enter Password" name="txtPassword" required>
+                            <input id="txtPassword" type="password" placeholder="Enter Password" name="txtPassword" required>
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtConfirmPassword"><b>Confirm Password:</b></label>
-                            <input type="text" placeholder="Confirm Password" name="txtConfirmPassword" required>
+                            <input id="txtConfirmPassword" type="text" placeholder="Confirm Password" name="txtConfirmPassword" required>
                         </div>
                     </div>
                     
                     <div class="form-group col">
-                        <label for="chkGender"><b>Gender:</b> </label>
+                        <label><b>Gender:</b> </label>
                         <div class="auto">
                             <div class="form-check">
                                 <input type="radio" id="rbMale" name="gender" value="male" class="form-check-input">
@@ -118,7 +119,7 @@
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtSecurityQuestions"><b>Security Questions:</b></label>
+                            <label for="securityAnswers"><b>Security Questions:</b></label>
                             <select name="securityQuestions" id="securityQuestions">
                                 <option value="firstJob">What was your first place of employment?</option>
                                 <option value="schoolMascot">What was your schools mascot?</option>
@@ -127,7 +128,7 @@
                             </select>
                             <br>
                             <div class="col auto">
-                                <input type="text" placeholder="Answer" name="txtSecurityAnswer" class="form-control" required></input>
+                                <input type="text" id="securityAnswers" name="txtSecurityAnswer" class="form-control" placeholder="Answer" required>
                             </div>   
                         </div>
                     </div>    
@@ -138,13 +139,13 @@
                                 <label for="txtBio"><b>About Me:</b></label>
                             </div>
                             <div class="col-95">
-                                <textarea id="txtBiobox" name="bioBox" rows="4" cols="50" class="form-control" placeholder = "Tell us about yourself."></textarea>
+                                <textarea id="txtBio" name="bioBox" rows="4" cols="50" class="form-control" placeholder = "Tell us about yourself."></textarea>
                                 <br><br>                        
                             </div>
                         </div>
                     </div>
 
-                    <label for="chkRemeber"><b>Remember me:</b> <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px"></label>
+                    <label for="chkRemeber"><b>Remember me:</b> <input id="chkRemeber" type="checkbox" checked="checked" name="chkRemember" style="margin-bottom: 15px"></label>
 
                     <p>By creating an account you agree to our <a href="#" style="color: #1427FE">Terms & Privacy</a>.</p>
 
