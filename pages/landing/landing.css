@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial;
+  font-family: "Audiowide", sans-serif;
 }
 
 /*Navigation Bar Style*/
@@ -59,6 +59,9 @@
 }
 .post-text::before {
   content: " Post";
+}
+.reply-text::before{
+  content:"Reply";
 }
 .nav-links li a button, .more-button button {
   border-radius: 25px;
@@ -136,9 +139,11 @@
     text-align: center;
     font-family:Audiowide;
   }
+/* Content-Box Title */ 
 .h4{
   font-family: Audiowide;
 }
+/* Style in footer */
   .footer {
     padding: 10px 186px;
     background-color: #394867;
@@ -172,18 +177,21 @@
     padding-top: 102px;
   }
 
+  /*background containing the content boxes */
   .body {
     background: #9BA4B4;
     border-radius: 25px;
     padding: 10px 135px;
     color: #14274E;
   }
-
+/* honestly not sure */
   .randomContent{
     background: #F1F6F9;
     padding: 10px 186px;
     color: #14274E;
   }
+
+  /*Content box is the box containing each post*/
   .content-box{
     border: 3px solid  #14274E;
     border-radius: 25px;
@@ -191,22 +199,24 @@
     color: #9BA4B4;
     padding: 3%;
   }
+  /*holds all the content boxes*/
   .content {
     margin: 0 auto;
     display: block;
   }
-  
+  /*text after a video or image*/
   .txtCaption{
     padding: 0 5%;
   }
-
+  /*User who posted the content / reply*/
   .txtAuthor{
     font-size: 10px;
   }
+  /*the time it was posted*/
   .txtDate{
     font-size: 10px;
   }
-
+  /*Image formating */
   .img{
     padding: 3%;
     float:left;
@@ -214,7 +224,7 @@
     height:100%;
     object-fit:cover;
   }
-
+  /*Box containing the iframe so that you can center and resize the video */
   .video-container { 
     position: relative;
     padding-bottom: 56.25%; 
@@ -222,7 +232,7 @@
     height: 0; 
     overflow: hidden;
   }
-
+  /*the resizing part of the video box */
   .video-container iframe, .video-container object, .video-container embed { 
     position: absolute; 
     padding: 3%;
