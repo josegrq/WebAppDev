@@ -62,7 +62,7 @@
 .more-text::before {
   content: " More";
 }
-.nav-links li a button, .other button {
+.nav-links li button, .other button {
   border-radius: 25px;
   background-color: transparent;
   transition: all ease .5s;
@@ -74,7 +74,7 @@
 .other {
   text-align: center;
 }
-.nav-links li a button:hover, .other button:hover {
+.nav-links li button:hover, .other button:hover {
   background-color:  #14274E;
   text-decoration: none;
   text-decoration-style: none;
