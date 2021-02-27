@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Audiowide", sans-serif;
+  font-family: Arial;
 }
 
 /*Navigation Bar Style*/
@@ -58,9 +58,6 @@
 }
 .post-text::before {
   content: " Post";
-}
-.reply-text::before{
-  content:"Reply";
 }
 .more-text::before {
   content: " More";
@@ -196,6 +193,13 @@
     width: 50%;
     margin: 0 auto;
     text-align: center;
+  }
+  .btnReply button {
+    color: black;
+    padding: 2px 5px;
+    border-radius: 10px;
+    margin-top: 10px;;
+
   }
   
   /* The sticky class is added to the header with JS when it reaches its scroll position */
