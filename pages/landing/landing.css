@@ -105,8 +105,11 @@
     background: #394867;
     color: #9BA4B4;
     text-align: center;
+    font-family:Audiowide;
   }
-
+.h4{
+  font-family: Audiowide;
+}
   .footer {
     padding: 10px 186px;
     background-color: #394867;
@@ -125,6 +128,7 @@
     padding: 16px;
     width: 50%;
     margin: 0 auto;
+    text-align: center;
   }
   
   /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -140,8 +144,9 @@
   }
 
   .body {
-    background: #F1F6F9;
-    padding: 10px 186px;
+    background: #9BA4B4;
+    border-radius: 25px;
+    padding: 10px 135px;
     color: #14274E;
   }
 
@@ -150,9 +155,50 @@
     padding: 10px 186px;
     color: #14274E;
   }
-
-  .content + .iframe {
-      margin:auto;
-      display: block;
+  .content-box{
+    border: 3px solid  #14274E;
+    border-radius: 25px;
+    background-color: #394867;
+    color: #9BA4B4;
+    padding: 3%;
+  }
+  .content {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .txtCaption{
+    padding: 0 5%;
   }
 
+  .txtAuthor{
+    font-size: 10px;
+  }
+  .txtDate{
+    font-size: 10px;
+  }
+
+  .img{
+    padding: 3%;
+    float:left;
+    width:50%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .video-container { 
+    position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 30px;
+    height: 0; 
+    overflow: hidden;
+  }
+
+  .video-container iframe, .video-container object, .video-container embed { 
+    position: absolute; 
+    padding: 3%;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+  }
