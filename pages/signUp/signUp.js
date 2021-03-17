@@ -99,34 +99,33 @@ const app = Vue.createApp({
                 }
             }
             /*Address*/
-            if (!this.txtStreet) {
-                this.errors.push("Street required.");
-                document.getElementsByName("txtStreet")[0].style.backgroundColor = "red";
-            } else if (!this.vaildText(this.txtStreet)) {
+            if (!this.vaildText(this.txtStreet)) {
                 this.errors.push('Invalid characters in Street Address.');
                 document.getElementsByName("txtStreet")[0].style.backgroundColor = "red";
             }
-            if (!this.txtCity) {
-                this.errors.push("City required.");
-                document.getElementsByName("txtCity")[0].style.backgroundColor = "red";
-            } else if (!this.vaildText(this.txtCity)) {
+            if (!this.vaildText(this.txtCity)) {
                 this.errors.push('Invalid characters in City field.');
                 document.getElementsByName("txtCity")[0].style.backgroundColor = "red";
             }
-            if (!this.txtState) {
-                this.errors.push("State required.");
-                document.getElementsByName("txtState")[0].style.backgroundColor = "red";
-            } else if (!this.vaildText(this.txtState)) {
+            if (!this.vaildText(this.txtState)) {
                 this.errors.push('Invalid characters in State field.');
                 document.getElementsByName("txtState")[0].style.backgroundColor = "red";
             }
-            if (!this.txtZipcode) {
-                this.errors.push("Zipcode required.");
-                document.getElementsByName("txtZipcode")[0].style.backgroundColor = "red";
-            } else if (!this.vaildText(this.txtZipcode)) {
+            if (!this.vaildText(this.txtZipcode)) {
                 this.errors.push('Invalid characters in Zipcode field.');
                 document.getElementsByName("txtZipcode")[0].style.backgroundColor = "red";
             }
+
+            /*Security Question*/
+            if (!this.txtSecurityAnswers) {
+                this.errors.push('Security Question is required.');
+                document.getElementsByName("txtSecurityAnswers")[0].style.backgroundColor = "red";
+            }
+            else if (!this.vaildText(this.txtSecurityAnswers)) {
+                this.errors.push('Invalid characters in Security field.');
+                document.getElementsByName("txtSecurityAnswers")[0].style.backgroundColor = "red";
+            }
+
             /*Bio*/
             if (!this.vaildText(this.txtBio)) {
                 this.errors.push('Invalid characters in Biography field.');
