@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="./signUp.css" rel="stylesheet" type="text/css">
+        <script src="https://unpkg.com/vue@next"></script>
         <title> Sign Up for Sweat </title>
+        
         <style>
             body {font-family: Arial, Helvetica, sans-serif;}
         </style>
@@ -17,29 +19,32 @@
     <body>
 
 
-        <div class="form-popup" id="signUpForm">
-            <form action="/action_page.php" class="form-container">
+        <div class="form-popup" id="app">
+            <form @submit = "checkForm" action="../signIn/signIn.html" method="post" novalidate="true" class="form-container">
                 <div class="container">
                     <h1>Sign Up</h1>
+                    <p v-if="errors.length">Please correct the following:
+                        <ul> <li v-for="error in errors">{{ error }}</li> </ul>
+                    </p>
                     <p>Please fill out this form to create an account with Sweat.</p>
                     <hr>
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtFirstName"><b>First Name:</b></label>
-                            <input id="txtFirstName" type="text" placeholder="First Name" name="txtFirstName" required>
+                            <input id="txtFirstName" v-model = "txtFirstName" type="text" placeholder="First Name" name="txtFirstName">
                         </div>
                     </div>
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtLastName"><b>Last Name:</b></label>
-                            <input id="txtLastName" type="text" placeholder="Last Name" name="txtLastName" required>
+                            <input id="txtLastName" v-model = "txtLastName" type="text" placeholder="Last Name" name="txtLastName">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtUserName"><b>Username:</b></label>
-                            <input id="txtUserName" type="text" placeholder="Username" name="txtUserName" required>
+                            <input id="txtUserName" v-model = "txtUserName" type="text" placeholder="Username" name="txtUserName">
                         </div>
                     </div>
 
@@ -53,28 +58,28 @@
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtEmail"><b>Email:</b></label>
-                            <input id="txtEmail" type="text" placeholder="Enter Email" name="txtEmail" required>
+                            <input id="txtEmail" v-model = "txtEmail" type="email" placeholder="Enter Email" name="txtEmail">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                            <label for="txtConfirmEmail"><b>Confirm Email:</b></label>
-                           <input id="txtConfirmEmail" type="text" placeholder="Confirm Email" name="txtConfirmEmail" required>
+                           <input id="txtConfirmEmail" v-model = "txtConfirmEmail" type="email" placeholder="Confirm Email" name="txtConfirmEmail">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtPassword"><b>Password:</b></label>
-                            <input id="txtPassword" type="password" placeholder="Enter Password" name="txtPassword" required>
+                            <input id="txtPassword" v-model="txtPassword" type="password" placeholder="Enter Password" name="txtPassword">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtConfirmPassword"><b>Confirm Password:</b></label>
-                            <input id="txtConfirmPassword" type="text" placeholder="Confirm Password" name="txtConfirmPassword" required>
+                            <input id="txtConfirmPassword" v-model="txtConfirmPassword" type="password" placeholder="Confirm Password" name="txtConfirmPassword">
                         </div>
                     </div>
                     
@@ -102,16 +107,16 @@
                                 <b>Address:</b> 
                             </label>
                             <div class="col auto">
-                                <input type="text" id="txtAddress" name="txtAddress" class="form-control" placeholder="Street"> 
+                                <input type="text" v-model = "txtStreet" id="txtStreet" name="txtStreet" class="form-control" placeholder="Street"> 
                             </div>
                             <div class="col auto">
-                                <input type="text" id="txtCity" name="txtCity" class="form-control" placeholder="City"> 
+                                <input type="text"  v-model = "txtCity" id="txtCity" name="txtCity" class="form-control" placeholder="City"> 
                             </div>
                             <div class="col auto">
-                                <input type="text" id="txtState" name="txtState" class="form-control" placeholder="State"> 
+                                <input type="text"  v-model = "txtState" id="txtState" name="txtState" class="form-control" placeholder="State"> 
                             </div>
                             <div class="col auto">
-                                <input type="text" id="txtZipcode" name="txtZipcode" class="form-control" placeholder="Zipcode" pattern="[0-9]{5}"> 
+                                <input type="text"  v-model = "txtZipcode" id="txtZipcode" name="txtZipcode" class="form-control" placeholder="Zipcode" pattern="[0-9]{5}"> 
                             </div>
                         </div>
                     </div>
@@ -119,18 +124,16 @@
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="securityAnswers"><b>Security Questions:</b></label>
-                            <select name="securityQuestions" id="securityQuestions">
-                                <option value="firstJob">What was your first place of employment?</option>
-                                <option value="schoolMascot">What was your schools mascot?</option>
-                                <option value="sportsTeam">What is your favorite team?</option>
-                                <option value="workOut">What is your favorite workout?</option>
+                            <label for="securityQuestions"><b>Security Questions:</b></label>
+                            <select v-model="securityQuestions" name="securityQuestions" id="securityQuestions">
+                                <option v-for="option in options" v-bind:value="option.id" v-bind:key="option.value">{{option.value}}</option>
                             </select>
                             <br>
-                            <div class="col auto">
-                                <input type="text" id="securityAnswers" name="txtSecurityAnswer" class="form-control" placeholder="Answer" required>
-                            </div>   
+                            <div v-if="securityQuestions >= 1" class="col auto" name="securityAnswer" id="securityAnswer">
+                                <input type="text" v-model="securityAnswers" id="securityAnswers" name="txtSecurityAnswers" class="form-control" placeholder="Answer">
+                            </div>  
                         </div>
+                        
                     </div>    
                     
                     <div class="form-group col">
@@ -139,7 +142,7 @@
                                 <label for="txtBio"><b>About Me:</b></label>
                             </div>
                             <div class="col-95">
-                                <textarea id="txtBio" name="bioBox" rows="4" cols="50" class="form-control" placeholder = "Tell us about yourself."></textarea>
+                                <textarea id="txtBio" v-model="txtBio" name="bioBox" rows="4" cols="50" class="form-control" placeholder = "Tell us about yourself."></textarea>
                                 <br><br>                        
                             </div>
                         </div>
@@ -150,7 +153,7 @@
                     <p>By creating an account you agree to our <a href="#" style="color: #1427FE">Terms & Privacy</a>.</p>
 
                     <div class="clearfix">
-                        <button type="submit" class="btn">Sign Up</button>
+                        <button type="submit" class="btn" value="submit">Sign Up</button>
                         <button type="submit" class="btn cancel" onclick="goBack()">Close</button>
                     </div>
                 </div>
@@ -160,30 +163,18 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        <script src="./signUp.js"></script>
         <script type="text/javascript">
-            $(function () {
-                $("#btnSubmit").click(function () {
-                    var password = $("#txtPassword").val();
-                    var confirmPassword = $("#txtConfirmPassword").val();
-                    var email = $("#txtEmail").val();
-                    var confirmEmail = $("#txtConfirmEmail").val();
-                    if (password != confirmPassword) {
-                        alert("Passwords do not match.");
-                        return false;
-                    }
-                    else if (email != confirmEmail){
-                        alert("Email addresses do not match.")
-                        return false;
-
-                    }
-                    return true;
-                });
-            });
+            
 
             function goBack() {
                 window.history.back();
             }
+            
+            
+        </script>
+        <script>
+            const mountedApp = app.mount("#app")
         </script>
     </body>
 </html>

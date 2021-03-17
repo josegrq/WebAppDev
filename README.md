@@ -14,6 +14,7 @@ Google Fonts
 Visual Studio Code
 Github
 Github Desktop
+Vue JS
 
 About Us:
 Sweat is a social media web application that aims to connect athletes
@@ -55,6 +56,13 @@ looked out of place. I used the darker outline to try and 'focus' the
 users eyes towards the form and I also wanted to keep the single line 
 per entry that twitters sign up follows as it keeps everything legible
 and easy for users of all ages.
+
+Validation on Sign Up form (Kyle):
+Followed the Vue.js documentation on form validation to create the nessesary
+functions required to complete ethe assignment. Text fields turn red when
+there is an error (Nothing in a required field, invalid characters, wrong confirmation),
+and the top of the sign up form also informs the user as to where and why the error occured.
+The submit button now brings the user to the sign in page.
 
 Sign In (Jose):
 I took inspiration from Facebbok and decided to keep the sign in page as simple as possible.

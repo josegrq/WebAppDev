@@ -80,3 +80,6 @@ hr {
   opacity: 1;
 }
 
+.alert-color{
+  background-color:red;
+}
