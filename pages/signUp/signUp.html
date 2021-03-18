@@ -20,7 +20,7 @@
 
 
         <div class="form-popup" id="app">
-            <form @submit = "checkForm" action="../signIn/signIn.html" method="post" novalidate="true" class="form-container">
+            <form @submit = "checkForm" action="../signIn/signIn.html" method="post" class="form-container">
                 <div class="container">
                     <h1>Sign Up</h1>
                     <p v-if="errors.length">Please correct the following:
@@ -51,7 +51,7 @@
                     <div class="form-group col">
                         <div class="auto">
                             <label for="txtDoB"><b>Date of birth:*</b></label>
-                            <input id="txtDoB" type="date" name="txtDoB" required class="form-control">
+                            <input id="txtDoB" type="date" name="txtDoB" required class="form-control" required>
                         </div>
                     </div>
 

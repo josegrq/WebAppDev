@@ -147,7 +147,7 @@ const app = Vue.createApp({
         },
 
         vaildText: function (text) {
-            var re = /[A-Za-z0-9 ._^%$#!~@,-]/g;
+            var re = /[A-Za-z0-9 ._^%$!~@,]/g;
             return re.test(text);
         }
 
