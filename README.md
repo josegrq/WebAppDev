@@ -62,7 +62,11 @@ Followed the Vue.js documentation on form validation to create the nessesary
 functions required to complete ethe assignment. Text fields turn red when
 there is an error (Nothing in a required field, invalid characters, wrong confirmation),
 and the top of the sign up form also informs the user as to where and why the error occured.
-The submit button now brings the user to the sign in page.
+The submit button now brings the user to the sign in page. All required fields except for the 
+users date of birth are validated and checked using vue.js. Date is not a format that vue could
+handle which required me to keep the browser validation on for the date verification though I 
+did follow the vaildateEmail() function in the vue.js documentation to create a validator that
+worked without the brower. 
 
 Sign In (Jose):
 I took inspiration from Facebbok and decided to keep the sign in page as simple as possible.
