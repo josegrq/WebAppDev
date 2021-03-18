@@ -20,7 +20,7 @@
 
 
         <div class="form-popup" id="app">
-            <form @submit.prevent = "checkForm" action="../signIn/signIn.html" method="post" class="form-container">
+            <form @submit = "checkForm" action="../signIn/signIn.html" method="post" novalidate="true" class="form-container">
                 <div class="container">
                     <h1>Sign Up</h1>
                     <p v-if="errors.length">Please correct the following:
@@ -30,55 +30,55 @@
                     <hr>
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtFirstName"><b>First Name:</b></label>
+                            <label for="txtFirstName"><b>First Name:*</b></label>
                             <input id="txtFirstName" v-model = "txtFirstName" type="text" placeholder="First Name" name="txtFirstName">
                         </div>
                     </div>
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtLastName"><b>Last Name:</b></label>
+                            <label for="txtLastName"><b>Last Name:*</b></label>
                             <input id="txtLastName" v-model = "txtLastName" type="text" placeholder="Last Name" name="txtLastName">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtUserName"><b>Username:</b></label>
+                            <label for="txtUserName"><b>Username:*</b></label>
                             <input id="txtUserName" v-model = "txtUserName" type="text" placeholder="Username" name="txtUserName">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtDoB"><b>Date of birth:</b></label>
+                            <label for="txtDoB"><b>Date of birth:*</b></label>
                             <input id="txtDoB" type="date" name="txtDoB" required class="form-control">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtEmail"><b>Email:</b></label>
+                            <label for="txtEmail"><b>Email:*</b></label>
                             <input id="txtEmail" v-model = "txtEmail" type="email" placeholder="Enter Email" name="txtEmail">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
-                           <label for="txtConfirmEmail"><b>Confirm Email:</b></label>
+                           <label for="txtConfirmEmail"><b>Confirm Email:*</b></label>
                            <input id="txtConfirmEmail" v-model = "txtConfirmEmail" type="email" placeholder="Confirm Email" name="txtConfirmEmail">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtPassword"><b>Password:</b></label>
+                            <label for="txtPassword"><b>Password:*</b></label>
                             <input id="txtPassword" v-model="txtPassword" type="password" placeholder="Enter Password" name="txtPassword">
                         </div>
                     </div>
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="txtConfirmPassword"><b>Confirm Password:</b></label>
+                            <label for="txtConfirmPassword"><b>Confirm Password:*</b></label>
                             <input id="txtConfirmPassword" v-model="txtConfirmPassword" type="password" placeholder="Confirm Password" name="txtConfirmPassword">
                         </div>
                     </div>
@@ -124,7 +124,7 @@
 
                     <div class="form-group col">
                         <div class="auto">
-                            <label for="securityQuestions"><b>Security Questions:</b></label>
+                            <label for="securityQuestions"><b>Security Questions:*</b></label>
                             <select v-model="securityQuestions" name="securityQuestions" id="securityQuestions">
                                 <option v-for="option in options" v-bind:value="option.id" v-bind:key="option.value">{{option.value}}</option>
                             </select>
@@ -142,7 +142,7 @@
                                 <label for="txtBio"><b>About Me:</b></label>
                             </div>
                             <div class="col-95">
-                                <textarea id="txtBio" v-model="txtBio" name="bioBox" rows="4" cols="50" class="form-control" placeholder = "Tell us about yourself."></textarea>
+                                <textarea id="txtBio" v-model="txtBio" name="txtBio" rows="4" cols="50" class="form-control" placeholder = "Tell us about yourself."></textarea>
                                 <br><br>                        
                             </div>
                         </div>
