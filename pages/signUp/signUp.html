@@ -20,7 +20,7 @@
 
 
         <div class="form-popup" id="app">
-            <form @submit = "checkForm" action="../signIn/signIn.html" method="post" novalidate="true" class="form-container">
+            <form @submit.prevent = "checkForm" action="../signIn/signIn.html" method="post" class="form-container">
                 <div class="container">
                     <h1>Sign Up</h1>
                     <p v-if="errors.length">Please correct the following:

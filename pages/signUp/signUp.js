@@ -117,13 +117,13 @@ const app = Vue.createApp({
             }
 
             /*Security Question*/
-            if (!this.txtSecurityAnswers) {
+            if (!this.securityAnswers) {
                 this.errors.push('Security Question is required.');
-                document.getElementsByName("txtSecurityAnswers")[0].style.backgroundColor = "red";
+                document.getElementsByName("securityQuestions")[0].style.backgroundColor = "red";
             }
-            else if (!this.vaildText(this.txtSecurityAnswers)) {
+            else if (!this.vaildText(this.securityAnswers)) {
                 this.errors.push('Invalid characters in Security field.');
-                document.getElementsByName("txtSecurityAnswers")[0].style.backgroundColor = "red";
+                document.getElementsByName("securityQuestions")[0].style.backgroundColor = "red";
             }
 
             /*Bio*/
